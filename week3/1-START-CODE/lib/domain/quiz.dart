@@ -72,26 +72,6 @@ class Quiz{
     players.add(player);
   }
 
-  Question? getQuestionById(String id) {
-    return questions.firstWhere((q) => q.id == id, orElse: () => Question(
-      id: 'not-found',
-      title: 'Question not found',
-      choices: [],
-      goodChoice: '',
-    ));
-  }
-
-  Answer? getAnswerById(String id) {
-    for (var player in players) {
-      for (var answer in player.answers) {
-        if (answer.id == id){
-         return answer;
-        }
-      }
-    }
-    return null;
-  }
-
   void showAllScores() {
     for (var player in players) {
       print('Player:${player.name}            Score:${player.getScoreInPoint(questions)}');
