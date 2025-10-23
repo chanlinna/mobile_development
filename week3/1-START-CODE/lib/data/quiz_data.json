@@ -1,0 +1,125 @@
+{
+  "id": "quiz-1",
+  "questions": [
+    {
+      "id": "q1",
+      "title": "Capital of France?",
+      "choices": [
+        "Paris",
+        "London",
+        "Rome"
+      ],
+      "goodChoice": "Paris",
+      "points": 10
+    },
+    {
+      "id": "q2",
+      "title": "2+2",
+      "choices": [
+        "2",
+        "4",
+        "5"
+      ],
+      "goodChoice": "4",
+      "points": 50
+    }
+  ],
+  "players": [
+    {
+      "id": "cb4559cc-e4e5-4869-87b3-db1c02b40013",
+      "name": "Linna",
+      "answers": [
+        {
+          "id": "55071d9c-4f15-400f-919f-0f05865c4c9e",
+          "questionId": "q1",
+          "answerChoice": "Rome"
+        },
+        {
+          "id": "120020d3-d51f-416c-8e17-4a6628f8a9ab",
+          "questionId": "q2",
+          "answerChoice": "4"
+        }
+      ]
+    },
+    {
+      "id": "79356f43-1a3c-4859-aa75-1d259cb63298",
+      "name": "Liza",
+      "answers": [
+        {
+          "id": "50dff152-feb9-4e28-bee6-38550205a590",
+          "questionId": "q1",
+          "answerChoice": "Paris"
+        },
+        {
+          "id": "adb0cbbf-1375-4bbf-b347-775d0e4ea093",
+          "questionId": "q2",
+          "answerChoice": "4"
+        }
+      ]
+    },
+    {
+      "id": "b2782dc3-55fc-49c8-92b4-4019163697db",
+      "name": "Veysean",
+      "answers": [
+        {
+          "id": "86df4119-04ac-4927-831a-c8b0b02982d1",
+          "questionId": "q1",
+          "answerChoice": "London"
+        },
+        {
+          "id": "62ab147f-7c4a-4f7b-966d-5afbe720365b",
+          "questionId": "q2",
+          "answerChoice": "4"
+        }
+      ]
+    },
+    {
+      "id": "4f2586f2-6d4e-40ef-9d76-9346b624783d",
+      "name": "Nika",
+      "answers": [
+        {
+          "id": "9f532042-a1f5-4940-88d9-4dc1210c912f",
+          "questionId": "q1",
+          "answerChoice": "Rome"
+        },
+        {
+          "id": "3943a59a-fa43-437f-a7eb-97578b2597c7",
+          "questionId": "q2",
+          "answerChoice": "2"
+        }
+      ]
+    },
+    {
+      "id": "847b1be4-d145-4b55-a51b-14a3ab85b0e2",
+      "name": "Gechty",
+      "answers": [
+        {
+          "id": "a34f8f1b-37e9-411e-9dfc-47ca775cf818",
+          "questionId": "q1",
+          "answerChoice": ""
+        },
+        {
+          "id": "c6ce7b2d-42f3-4849-9c0e-33e02a18aff5",
+          "questionId": "q2",
+          "answerChoice": "4"
+        }
+      ]
+    },
+    {
+      "id": "eecf7dc2-5e62-4afe-bcef-df98affe691e",
+      "name": "Sivmey",
+      "answers": [
+        {
+          "id": "e24dee61-9ca0-4149-a074-443f93c63621",
+          "questionId": "q1",
+          "answerChoice": "PAris"
+        },
+        {
+          "id": "48e0343c-b247-4e6c-9c86-e742d96a51f3",
+          "questionId": "q2",
+          "answerChoice": "4"
+        }
+      ]
+    }
+  ]
+}
