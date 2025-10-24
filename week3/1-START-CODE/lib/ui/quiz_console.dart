@@ -18,20 +18,7 @@ class QuizConsole {
         return;
       }
 
-      Player? player;
-
-      for(var p in quiz.players){
-        if(p.name == playerName){
-          player = p;
-          p.answers.clear();
-          break;
-        }
-      }
-
-      if (player == null) {
-        player = Player(name: playerName);
-        quiz.addPlayer(player);
-      }
+      Player player = quiz.checkPlayer(playerName);
 
       for (var question in quiz.questions) {
         print('Question: ${question.title} - (${question.points} points)');

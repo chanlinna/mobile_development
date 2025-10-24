@@ -72,6 +72,19 @@ class Quiz{
     players.add(player);
   }
 
+  Player checkPlayer(String name) {
+    for (var p in players) {
+      if (p.name == name) {
+        p.answers.clear();
+        return p;
+      }
+    }
+
+    final newPlayer = Player(name: name);
+    addPlayer(newPlayer);
+    return newPlayer;
+  }
+
   void showAllScores() {
     for (var player in players) {
       print('Player:${player.name}            Score:${player.getScoreInPoint(questions)}');
