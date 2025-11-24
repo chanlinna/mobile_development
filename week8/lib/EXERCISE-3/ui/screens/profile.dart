@@ -7,9 +7,9 @@ class ProfileApp extends StatelessWidget {
   final ProfileData profileData;
   const ProfileApp({super.key, required this.profileData});
 
-  List<ProfileTile> getTiles(){
-    return profileData.tiles.map((tile) => ProfileTile(tile: tile)).toList();
-  }
+  // List<ProfileTile> getTiles(){
+  //   return profileData.tiles.map((tile) => ProfileTile(tile: tile)).toList();
+  // }
 
   @override
   Widget build(BuildContext context) {
@@ -50,24 +50,17 @@ class ProfileApp extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 20),
-            ...getTiles(),
+            //...getTiles(),
+            Expanded(child: ListView.builder(itemCount: profileData.tiles.length, itemBuilder: _buildTile))
           ],
         ),
       ),
     );
   }
-}
 
-class ProfileTile extends StatelessWidget {
-  const ProfileTile({
-    super.key,
-    required this.tile
-  });
-
-  final TileData tile;
-
-  @override
-  Widget build(BuildContext context) {
+  Widget _buildTile(BuildContext context, int index) {
+    final tile = profileData.tiles[index];
+    
     return Padding(
       padding: const EdgeInsets.all(8.0),
       child: Card(
@@ -81,3 +74,27 @@ class ProfileTile extends StatelessWidget {
     );
   }
 }
+
+// class ProfileTile extends StatelessWidget {
+//   const ProfileTile({
+//     super.key,
+//     required this.tile
+//   });
+
+//   final TileData tile;
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return Padding(
+//       padding: const EdgeInsets.all(8.0),
+//       child: Card(
+//         margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 4),
+//         child: ListTile(
+//           leading: Icon(tile.icon, color: AppColors.primary),
+//           title: Text(tile.title),
+//           subtitle: Text(tile.value),
+//         ),
+//       ),
+//     );
+//   }
+// }
