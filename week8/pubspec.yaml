@@ -52,10 +52,7 @@ dev_dependencies:
 # The following section is specific to Flutter packages.
 flutter:
   assets:
-    - assets/fall.png
-    - assets/spring.png
-    - assets/summer.png
-    - assets/winter.png
+    - assets/Ex-3/
 
 
   # The following line ensures that the Material Icons font is
