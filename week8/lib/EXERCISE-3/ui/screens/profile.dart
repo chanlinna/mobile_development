@@ -7,6 +7,10 @@ class ProfileApp extends StatelessWidget {
   final ProfileData profileData;
   const ProfileApp({super.key, required this.profileData});
 
+  List<ProfileTile> getTiles(){
+    return profileData.tiles.map((tile) => ProfileTile(tile: tile)).toList();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -35,18 +39,18 @@ class ProfileApp extends StatelessWidget {
               style: TextStyle(
                 fontSize: 24,
                 fontWeight: FontWeight.bold,
-                color: AppColors.primary,
+                color: const Color.fromARGB(255, 79, 78, 78),
               ),
             ),
             Text(
               profileData.position,
               style: TextStyle(
                 fontSize: 16,
-                color: Colors.grey,
+                color: const Color.fromARGB(255, 84, 83, 83),
               ),
             ),
             const SizedBox(height: 20),
-            ...profileData.tiles.map((tile)=>ProfileTile(tile: tile)),
+            ...getTiles(),
           ],
         ),
       ),
