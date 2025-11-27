@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:week8/EXERCISE-4/data/joke_data.dart';
-import 'package:week8/EXERCISE-4/ui/screen/jokes.dart';
 
+import 'EXERCISE-3/ui/screens/profile.dart';
+import 'EXERCISE-3/data/profile_data.dart';
+ 
 void main() {
   runApp(MaterialApp(
     debugShowCheckedModeBanner: false,
-    home: JokeApp(jokes: jokes)
+    home: ProfileApp(profileData: ronanProfile),
   ));
 }
