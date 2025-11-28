@@ -1,7 +1,34 @@
 import 'package:flutter/material.dart';
 
-class TemperatureScreen extends StatelessWidget {
-  TemperatureScreen({super.key});
+class TemperatureScreen extends StatefulWidget {
+  const TemperatureScreen({super.key});
+  
+  @override
+  State<TemperatureScreen> createState() => _TemperatureScreenState();
+}
+class _TemperatureScreenState extends State<TemperatureScreen>{
+  late TextEditingController controller;
+  String text = '';
+
+  @override
+  void initState() {
+    super.initState();
+    controller = TextEditingController();
+  }
+
+  @override
+  void dispose() {
+    controller.dispose();
+    super.dispose();
+  }
+
+  void convertToFahrenheit(){
+    final doubleNum = double.tryParse(controller.text);
+
+    setState(() {
+      text = ((doubleNum! * 9 / 5) + 32).toStringAsFixed(2);
+    });
+  }
 
   final InputDecoration inputDecoration = InputDecoration(
     enabledBorder: OutlineInputBorder(
@@ -36,7 +63,9 @@ class TemperatureScreen extends StatelessWidget {
             const Text("Temperature in Degrees:"),
             const SizedBox(height: 10),
             TextField(
+              controller: controller,
               decoration: inputDecoration,
+              onSubmitted: (_) => convertToFahrenheit(),
               style: const TextStyle(color: Colors.white),
             ),
             const SizedBox(height: 30),
@@ -48,11 +77,12 @@ class TemperatureScreen extends StatelessWidget {
                 color: Colors.white,
                 borderRadius: BorderRadius.circular(12),
               ),
-              child: const Text('test'),
+              child: Text(text),
             ),
           ],
         ),
       ),
     );
-  }
+}
+
 }

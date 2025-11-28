@@ -1,11 +1,50 @@
 import 'package:flutter/material.dart';
 
-import 'EXERCISE-3/ui/screens/profile.dart';
-import 'EXERCISE-3/data/profile_data.dart';
+import 'EXERCISE-2/ui/screens/welcome_screen.dart';
+import 'EXERCISE-2/ui/screens/temperature_screen.dart';
  
+class TemperatureApp extends StatefulWidget {
+  const TemperatureApp({super.key});
+
+  @override
+  State<TemperatureApp> createState() {
+    return _TemperatureAppState();
+  }
+}
+
+class _TemperatureAppState extends State<TemperatureApp> {
+  bool isConvert = false;
+
+  void convert() {
+    setState(() {
+      isConvert = !isConvert;
+    });
+  }
+  
+  @override
+  Widget build(context) {
+
+    return MaterialApp(
+      home: Scaffold(
+        body: Container(
+          decoration: const BoxDecoration(
+            gradient: LinearGradient(
+              colors: [
+                Color(0xff16C062),
+                Color(0xff00BCDC),
+              ],
+              begin: Alignment.topLeft,
+              end: Alignment.bottomRight,
+            ),
+          ),
+          child: isConvert? TemperatureScreen():WelcomeScreen(toConverter: convert),
+          //child: const WelcomeScreen(),
+        ),
+      ),
+    );
+  }
+}
+
 void main() {
-  runApp(MaterialApp(
-    debugShowCheckedModeBanner: false,
-    home: ProfileApp(profileData: ronanProfile),
-  ));
+  runApp(const TemperatureApp());
 }
