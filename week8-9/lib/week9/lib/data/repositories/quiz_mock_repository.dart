@@ -1,3 +1,4 @@
+import 'package:week8/week9/lib/model/question.dart';
 import 'package:week8/week9/lib/model/quiz.dart';
 
 class QuizData {

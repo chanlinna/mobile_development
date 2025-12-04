@@ -16,7 +16,8 @@ enum QuizScreenType {
 }
  
 class QuizApp extends StatefulWidget {
-  const QuizApp( {super.key});
+  final Quiz quiz;
+  const QuizApp( {super.key, required this.quiz});
 
 
   @override
@@ -30,7 +31,7 @@ class _QuizAppState extends State<QuizApp> {
   @override
   void initState() {
     super.initState();
-    quiz = QuizData().loadQuiz();
+    quiz = widget.quiz;
   }
 
   void goToPlayerNameScreen() {

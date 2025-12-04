@@ -24,6 +24,7 @@ class HistoryScreen extends StatelessWidget {
       ),
       body: Column(
         children: [
+          const Text('History screen is not done', style: TextStyle(color: Colors.white),),
           Expanded(
             child: ListView.builder(
               itemCount: quiz.players.length,
@@ -44,4 +45,3 @@ class HistoryScreen extends StatelessWidget {
     );
   }
 }
-
